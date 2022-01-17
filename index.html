@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>人物設定エディタ（試作品）</title>
+  <meta name="description" content="人物設定のエディタです。試作品につき、予期せぬエラーが出る可能性があります。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+  <!-- 開発用 -->
+  <script src="../module/jquery-1.10.2.js"></script>
+</head>
+<body class="bg-dark text-light">
+  <div class="container">
+    <h1 class="my-4">人物設定エディタ（試作品）</h1>
+    <p>登場人物の所謂「履歴書」を生成するツールです（ランダム設定生成機能の実装も検討中）。試作品につき、予期せぬエラーが出る可能性があります。</p>
+    <p id="btnSave">
+      <button id="save" class="btn btn-secondary mr-2">データの保存</button>
+      <label><input id="autoSave" type="checkbox" name="autoSave" value="a"> 自動保存機能を有効にする（1分毎、名前入力必須）</label>
+      <button id="restore" class="btn btn-secondary mr-2">データの復元</button> ← 名前を入力してから押してください
+    </p>
+    
+    <p name="charaProperty">
+      <div id="mainForm" class="formContainer">
+        
+      </div>
+      
+      <div class="formContainer">
+        <div class="formContainerChild long">
+          <h2>出力</h2>
+          <div class="navi">
+            <select id="paragraph" name="paragraph">
+              <option value="false">改行なし</option>
+              <option value="true">改行あり</option>
+            </select>
+            <button id="output" class="btn btn-secondary mx-2">出力</button>
+            <button id="select" class="btn btn-secondary">全選択</button>
+          </div>
+          <textarea id="outputArea" name="outputArea" class="form-control bg-dark text-light" placeholder="ここに人物設定書の完成文が出力されますので、コピペしてください。"></textarea>
+        </div>
+      </div>
+    </p>
+
+    <footer class="py-4 text-center">
+      <span id="cYear"></span>
+      <script src="../module/cYear.js"></script>
+      <noscript>Copyright (C) Enin Fujimi All Rights Reserved.</noscript>
+    </footer>
+  </div>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- bootstrap（開発用） -->
+  <script src="../module/jquery-3.5.1.min.js"></script>
+  <script src="../module/bootstrap-4.4.1-dist/popper.min.js"></script>
+  <script src="../module/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="array.js"></script>
+  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+  <script>htmlWriter();</script>
+</body>
+</html>

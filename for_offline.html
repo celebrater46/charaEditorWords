@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>人物設定エディタ・オフライン文書変換ツール</title>
+  <meta name="description" content="指定の形式で作成された設定文書を変換するツール（個人用）。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light">
+  <div class="container">
+    <h1 class="my-4">人物設定エディタ・オフライン文書変換ツール</h1>
+    <p>指定の形式で作成された設定文書を変換するツール（個人用）。</p>
+    <button id="get_default" class="btn btn-secondary mx-2 my-3">オフライン作業用マスターファイル</button>
+    <label><input type="checkbox" id="kaigyo" name="kaigyo">改行あり</label>
+    
+    <p name="charaProperty">
+      <div class="formContainer">
+        <textarea id="input_area" name="input_area" class="form-control bg-dark text-light" placeholder="ここに指定形式の文書をコピペしてください。"></textarea>
+        <div class="navi">
+          <select id="paragraph" name="paragraph">
+            <option value="false">改行なし</option>
+            <option value="true">改行あり</option>
+          </select>
+          <button id="output" class="btn btn-secondary mx-2">出力</button>
+          <button id="select" class="btn btn-secondary">全選択</button>
+        </div>
+        <textarea id="output_area" name="output_area" class="form-control bg-dark text-light" placeholder="ここに人物設定書の完成文が出力されますので、コピペしてください。"></textarea>
+      </div>
+    </p>
+
+    <footer class="py-4 text-center">
+      <span id="cYear"></span>
+      <script src="../../library/js/cYear.js"></script>
+      <noscript>Copyright (C) Enin (Eito Fujimi) All Rights Reserved.</noscript>
+    </footer>
+  </div>
+
+  <!-- bootstrap -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <!-- bootstrap（開発用） -->
+  <!-- <script src="../library/js/jquery-3.5.1.min.js"></script>
+  <script src="../library/bootstrap-4.4.1-dist/popper.min.js"></script>
+  <script src="../library/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script> -->
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+  <!-- 以下、CDN 障害につき Vue.js が読み込めない場合はローカルから読み込ませる -->
+  <!-- <script>window.Vue || document.write('<script src="../../library/js/vue.js"><\/script>');</script> -->
+  <script type="text/javascript" charset="utf-8" src="array.js"></script>
+  <script type="text/javascript" charset="utf-8" src="offline.js"></script>
+  <!-- <script>window.sessionStorage.setItem("from", "chara");</script> -->
+</body>
+</html>
